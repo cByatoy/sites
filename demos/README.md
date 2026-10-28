@@ -10,7 +10,17 @@
 
 Компании, люди, отзывы и реквизиты вымышлены — это указано в подвале каждого сайта.
 
-## Как опубликовать на Netlify (для каждой папки)
+## Ссылки
+
+| Сайт | Адрес | Netlify site ID |
+|---|---|---|
+| Гранит | https://granit-barbershop-demo.netlify.app | cfe4c81b-efd3-4884-8f6d-5cd543c366a9 |
+| Ясна | https://yasna-dental-demo.netlify.app | 7543d21a-139b-43c8-8d3f-330fdb13a6ee |
+| Разводной | https://razvodnoy-coffee-demo.netlify.app | 43c3b7d0-879d-43a3-a7a2-1fbaa07514e4 |
+
+Публикация — через коннектор Netlify из сессии Claude (деплой из папки сайта). Защита «только для команды» отключена.
+
+## Как опубликовать вручную через интерфейс Netlify (для каждой папки)
 1. Netlify → Add new project → Import an existing project → GitHub → репозиторий `sites`.
 2. Base directory: `demos/barbershop` (или `demos/dental`, `demos/coffee`).
 3. Build command — пусто, Publish directory — пусто (или та же папка).
