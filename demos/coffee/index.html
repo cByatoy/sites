@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кофейня «Разводной» на Грибоедова — кофе и выпечка до 2 ночи, Санкт-Петербург</title>
+  <meta name="description" content="Specialty-кофе, свежая выпечка и завтраки весь день в центре Петербурга. Открыты до 2:00 — успейте до развода мостов.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Кофейня «Разводной»">
+  <meta property="og:description" content="Кофе до развода мостов. Канал Грибоедова, 5.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">Разводной</a>
+      <nav class="nav" id="nav">
+        <a href="#menu">Меню</a>
+        <a href="#about">О нас</a>
+        <a href="#order">Торты на заказ</a>
+        <a href="#contacts">Как добраться</a>
+      </nav>
+      <span class="open-now"><i></i>Открыто до 2:00</span>
+      <button class="burger" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <h1>Кофе до&nbsp;развода мостов</h1>
+          <p class="lead">Specialty-кофе, выпечка из собственной пекарни и завтраки весь день. В двух минутах от Невского — и открыты, когда всё остальное уже закрыто.</p>
+          <div class="hero__actions">
+            <a href="#menu" class="btn">Смотреть меню</a>
+            <a href="#contacts" class="btn btn--outline">Как добраться</a>
+          </div>
+        </div>
+        <div class="hero__art reveal" aria-hidden="true">
+          <svg viewBox="0 0 480 420">
+            <circle cx="240" cy="200" r="190" fill="#f1c27d"/>
+            <path d="M40 300h400" stroke="#2b1d14" stroke-width="4"/>
+            <g fill="#2b1d14">
+              <rect x="70" y="200" width="22" height="100"/><rect x="388" y="200" width="22" height="100"/>
+              <path d="M92 300 228 180l8 9-136 120zM388 300 252 180l-8 9 136 120z"/>
+            </g>
+            <path d="M40 330c40 10 80 10 120 0s80-10 120 0 80 10 120 0 40-10 80 0" fill="none" stroke="#c4572e" stroke-width="5" stroke-linecap="round"/>
+            <path d="M40 360c40 10 80 10 120 0s80-10 120 0 80 10 120 0 40-10 80 0" fill="none" stroke="#c4572e" stroke-width="5" stroke-linecap="round" opacity=".5"/>
+            <g transform="translate(170 40)">
+              <path d="M30 40c0-14 20-14 20-28M60 40c0-14 20-14 20-28M90 40c0-14 20-14 20-28" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" class="steam"/>
+              <path d="M0 60h140l-12 82c-2 14-14 24-28 24H40c-14 0-26-10-28-24z" fill="#fff"/>
+              <path d="M138 78h12c14 0 22 10 20 24s-14 22-28 20" fill="none" stroke="#fff" stroke-width="10"/>
+              <rect x="-12" y="170" width="164" height="12" rx="6" fill="#fff"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Эспрессо от 160 ₽</span><span>Круассаны с утра</span><span>Завтраки весь день</span><span>Альтернатива на воронке</span><span>Можно с собакой</span><span>Розетки у каждого стола</span>
+        <span>Эспрессо от 160 ₽</span><span>Круассаны с утра</span><span>Завтраки весь день</span><span>Альтернатива на воронке</span><span>Можно с собакой</span><span>Розетки у каждого стола</span>
+      </div>
+    </div>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Меню</h2>
+          <p class="muted">Зерно обжариваем вместе с петербургской обжарочной — меняем сорта каждый месяц.</p>
+        </div>
+        <div class="tabs reveal" data-tabs>
+          <div class="tabs__list" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="tab-coffee" id="t-coffee">Кофе</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-other" id="t-other">Не кофе</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-food" id="t-food">Еда</button>
+          </div>
+          <div class="tabs__panel" id="tab-coffee" role="tabpanel" aria-labelledby="t-coffee">
+            <ul class="menu">
+              <li><span>Эспрессо</span><i></i><b>160 ₽</b></li>
+              <li><span>Американо</span><i></i><b>190 ₽</b></li>
+              <li><span>Капучино <small>250 / 350 мл</small></span><i></i><b>240 / 290 ₽</b></li>
+              <li><span>Флэт уайт</span><i></i><b>270 ₽</b></li>
+              <li><span>Латте <small>сироп +40 ₽</small></span><i></i><b>280 ₽</b></li>
+              <li><span>Раф «Белые ночи» <small>лаванда, ваниль</small></span><i></i><b>330 ₽</b></li>
+              <li><span>Воронка V60 <small>сорт месяца</small></span><i></i><b>300 ₽</b></li>
+              <li><span>Колд брю</span><i></i><b>260 ₽</b></li>
+            </ul>
+          </div>
+          <div class="tabs__panel" id="tab-other" role="tabpanel" aria-labelledby="t-other" hidden>
+            <ul class="menu">
+              <li><span>Какао с маршмеллоу</span><i></i><b>260 ₽</b></li>
+              <li><span>Матча латте</span><i></i><b>320 ₽</b></li>
+              <li><span>Чай листовой <small>чайник 500 мл</small></span><i></i><b>280 ₽</b></li>
+              <li><span>Облепиховый чай</span><i></i><b>310 ₽</b></li>
+              <li><span>Лимонад домашний</span><i></i><b>290 ₽</b></li>
+              <li><span>Свежевыжатый апельсин</span><i></i><b>350 ₽</b></li>
+            </ul>
+          </div>
+          <div class="tabs__panel" id="tab-food" role="tabpanel" aria-labelledby="t-food" hidden>
+            <ul class="menu">
+              <li><span>Круассан классический</span><i></i><b>190 ₽</b></li>
+              <li><span>Круассан с миндалём</span><i></i><b>260 ₽</b></li>
+              <li><span>Сырники со сметаной и ягодами</span><i></i><b>390 ₽</b></li>
+              <li><span>Скрэмбл на бриоши</span><i></i><b>420 ₽</b></li>
+              <li><span>Сэндвич с ростбифом</span><i></i><b>450 ₽</b></li>
+              <li><span>Чизкейк Сан-Себастьян</span><i></i><b>340 ₽</b></li>
+              <li><span>Морковный торт</span><i></i><b>320 ₽</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="about">
+      <div class="container about">
+        <div class="reveal">
+          <h2>Маленькая кофейня с большим окном на канал</h2>
+          <p>Мы открылись в 2021 году, когда поняли, что в центре негде выпить хороший кофе после десяти вечера. Теперь к нам заходят после театра, работы и прогулок по набережным — а летом ждут развода мостов с капучино в руках.</p>
+        </div>
+        <ul class="stats">
+          <li class="reveal"><b>24</b><span>места в зале и 8 на летней веранде</span></li>
+          <li class="reveal"><b>до 2:00</b><span>каждый день, даже по понедельникам</span></li>
+          <li class="reveal"><b>6-я</b><span>чашка бесплатно по карте гостя</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <div class="container order">
+        <div class="order__card reveal">
+          <h2>Торты и выпечка на&nbsp;заказ</h2>
+          <p>Торт на день рождения, сет круассанов в офис или кофе-брейк на мероприятие. Оставьте заявку — бариста свяжется и поможет выбрать.</p>
+          <ul class="order__list">
+            <li>Торты от 1,5 кг — за 2 дня</li>
+            <li>Сеты выпечки от 12 штук — за 1 день</li>
+            <li>Доставка по центру бесплатно от 3 000 ₽</li>
+          </ul>
+        </div>
+        <form class="form reveal" novalidate>
+          <label>Имя<input name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
+          <label>Телефон<input name="phone" type="tel" required autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
+          <label>Что хотите заказать<textarea name="comment" rows="3" placeholder="Например: морковный торт 2 кг на субботу"></textarea></label>
+          <label class="check"><input type="checkbox" name="consent" required> <span>Согласен на обработку персональных данных по <a href="privacy.html">политике конфиденциальности</a></span></label>
+          <button class="btn btn--wide" type="submit">Отправить заявку</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="contacts">
+      <div class="container contacts">
+        <div class="reveal">
+          <h2>Как добраться</h2>
+          <p class="contacts__addr">Набережная канала Грибоедова, 5<br><span class="muted">2 минуты от м. Невский проспект, вход со стороны канала</span></p>
+          <table class="hours">
+            <tr><td>Пн–Чт</td><td>8:00 – 2:00</td></tr>
+            <tr><td>Пт–Сб</td><td>9:00 – 3:00</td></tr>
+            <tr><td>Вс</td><td>9:00 – 2:00</td></tr>
+          </table>
+          <div class="socials">
+            <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://vk.com/" target="_blank" rel="noopener">ВКонтакте</a>
+            <a href="tel:+78120000000">+7 (812) 000-00-00</a>
+          </div>
+        </div>
+        <div class="map reveal">
+          <iframe title="Карта: кофейня Разводной" src="https://yandex.ru/map-widget/v1/?ll=30.326%2C59.938&z=16&pt=30.326%2C59.938%2Cpm2orm" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo">Разводной</span>
+      <p>ИП Петрова А.С., ИНН 000000000000 · <a href="privacy.html">Политика конфиденциальности</a> · © <span data-year></span></p>
+    </div>
+    <p class="container demo-note">Демо-сайт для портфолио. Кофейня и цены вымышлены.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
