@@ -1,0 +1,8 @@
+# Личные данные клиентов в публичный репозиторий не кладём
+leads.csv
+*.private.*
+private/
+.env
+.env.*
+node_modules/
+.DS_Store
