@@ -12,6 +12,13 @@
 
 ## Ссылки
 
+Основные (открываются в России без VPN) — GitHub Pages:
+- https://cbyatoy.github.io/sites/demos/barbershop/
+- https://cbyatoy.github.io/sites/demos/dental/
+- https://cbyatoy.github.io/sites/demos/coffee/
+
+Netlify (в России может не открываться без VPN):
+
 | Сайт | Адрес | Netlify site ID |
 |---|---|---|
 | Гранит | https://granit-barbershop-demo.netlify.app | cfe4c81b-efd3-4884-8f6d-5cd543c366a9 |
