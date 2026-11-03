@@ -64,6 +64,7 @@ p { margin: 0 0 1em; }
 .hero h1 { max-width: 900px; }
 .hero h1 em { font-style: normal; color: var(--gold); white-space: nowrap; }
 .lead { max-width: 620px; font-size: 19px; color: #e4e4e7; }
+.concept-tag { display: table; margin: 0 0 14px; padding: 7px 12px; border-radius: 4px; background: var(--gold); color: var(--ink); font-size: 13px; font-weight: 700; letter-spacing: .02em; }
 .status { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 999px; background: rgb(255 255 255 / .1); font-size: 14px; font-weight: 600; margin-bottom: 22px; }
 .status::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
 .status.is-open::before { background: #4ade80; box-shadow: 0 0 0 4px rgb(74 222 128 / .25); }
