@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Mustache — барбершоп у м. Ломоносовская, ул. Бабушкина, 53</title>
+  <meta name="description" content="Барбершоп The Mustache: мужские стрижки, борода, бритьё с распариванием и уход. Ежедневно 10:00–21:00, ул. Бабушкина, 53, м. Ломоносовская.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c1c1e'/%3E%3Cpath d='M5 19c3-1 5-4 6-8 1 3 3 5 5 5s4-2 5-5c1 4 3 7 6 8-4 1-7-1-8-3-1 2-2 3-3 3s-2-1-3-3c-1 2-4 4-8 3z' fill='%23e9e5dc'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="ink" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="4" seed="7" result="n"/>
+        <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.6 1.55"/>
+        <feComposite in2="SourceGraphic" operator="in"/>
+      </filter>
+      <symbol id="stache" viewBox="0 0 64 28"><path d="M2 22c7-1 11-8 13-18 2 7 6 12 11 12 2 0 4-2 6-5 2 3 4 5 6 5 5 0 9-5 11-12 2 10 6 17 13 18-9 3-17 0-21-5-2 3-5 5-9 5s-7-2-9-5c-4 5-12 8-21 5z"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="topwrap">
+    <div class="concept-bar">Это концепт сайта для The Mustache — подготовил Ярослав</div>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#top" class="logo" aria-label="The Mustache, на главную">
+          <svg class="logo__mark" aria-hidden="true"><use href="#stache"/></svg>
+          <span class="logo__text">The Mustache<small>barber shop</small></span>
+        </a>
+        <nav class="nav" id="nav">
+          <a href="#team">Команда</a>
+          <a href="#prices">Цены</a>
+          <a href="#space">Барбершоп</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        <a class="btn btn--dark btn--small header__cta" href="https://wa.me/79112587388" target="_blank" rel="noopener">Записаться</a>
+        <button class="burger" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span></button>
+      </div>
+    </header>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="ink ink--hero" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <p class="concept-tag">Концепт сайта · подготовил Ярослав</p>
+          <p class="eyebrow">Saint Petersburg · ул. Бабушкина, 53</p>
+          <h1>Территория мужчин, которые ценят безупречный вид</h1>
+          <p class="lead">Стрижки, борода, бритьё с распариванием и уход за кожей — рядом с метро Ломоносовская. Ежедневно с 10:00 до 21:00.</p>
+          <div class="hero__actions">
+            <a class="btn btn--dark" href="https://wa.me/79112587388" target="_blank" rel="noopener">Записаться</a>
+            <a class="btn btn--line" href="#prices">Цены</a>
+          </div>
+          <p class="promo"><b>−10%</b> на первое посещение</p>
+        </div>
+        <div class="hero__media reveal">
+          <div class="blade blade--photo"><img src="img/hall.webp" alt="Зал барбершопа The Mustache: круглые зеркала и барберские кресла" fetchpriority="high"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Команда</p>
+          <h2>Ваш барбер</h2>
+          <p class="muted">Три уровня мастеров — выбирайте под задачу и бюджет. Стрижка у любого из них включает консультацию, мытьё и укладку.</p>
+        </div>
+        <div class="team">
+          <article class="card-blade reveal">
+            <div class="card-blade__ink" aria-hidden="true"></div>
+            <div class="card-blade__title"><h3>Emilia</h3><p class="card-blade__role">Barber</p></div>
+            <p class="card-blade__note">Saint Petersburg<br>@the.mustache.spb</p>
+          </article>
+          <article class="card-blade reveal">
+            <div class="card-blade__ink" aria-hidden="true"></div>
+            <div class="card-blade__title"><h3>Maria</h3><p class="card-blade__role">Barber</p></div>
+            <p class="card-blade__note">Saint Petersburg<br>@the.mustache.spb</p>
+          </article>
+          <article class="card-blade reveal">
+            <div class="card-blade__ink" aria-hidden="true"></div>
+            <div class="card-blade__title"><h3>Alexander</h3><p class="card-blade__role">Barber</p></div>
+            <p class="card-blade__note">Saint Petersburg<br>@the.mustache.spb</p>
+          </article>
+        </div>
+        <p class="team__hint muted reveal">Имена — с ваших визиток. Специализацию и уровень каждого мастера подставим по вашим данным.</p>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="prices">
+      <div class="ink ink--prices" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Прайс</p>
+          <h2>Цены</h2>
+          <p class="muted">Стоимость зависит от уровня мастера.</p>
+        </div>
+        <div class="tabs reveal" data-tabs>
+          <div class="tabs__list" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="p-hair" id="b-hair">Стрижки</button>
+            <button role="tab" aria-selected="false" aria-controls="p-beard" id="b-beard">Борода и бритьё</button>
+            <button role="tab" aria-selected="false" aria-controls="p-combo" id="b-combo">Комплексы</button>
+            <button role="tab" aria-selected="false" aria-controls="p-care" id="b-care">Уход</button>
+          </div>
+
+          <div class="ptable" id="p-hair" role="tabpanel" aria-labelledby="b-hair">
+            <div class="ptable__row ptable__head"><span></span><span>Барбер</span><span>Старший</span><span>Топ</span></div>
+            <div class="ptable__row"><span>Мужская стрижка</span><b>1 500</b><b>1 800</b><b>2 300</b></div>
+            <div class="ptable__row"><span>Удлинённая (до плеч)</span><b>1 800</b><b>—</b><b>2 700</b></div>
+            <div class="ptable__row"><span>Удлинённая (ниже плеч)</span><b>2 000</b><b>—</b><b>3 000</b></div>
+            <div class="ptable__row"><span>Детская (до 12 лет)</span><b>1 500</b><b>1 800</b><b>2 300</b></div>
+            <div class="ptable__row"><span>Стрижка машинкой</span><b>1 000</b><b>1 500</b><b>1 700</b></div>
+          </div>
+          <div class="ptable" id="p-beard" role="tabpanel" aria-labelledby="b-beard" hidden>
+            <div class="ptable__row ptable__head"><span></span><span>Барбер</span><span>Старший</span><span>Топ</span></div>
+            <div class="ptable__row"><span>Коррекция бороды</span><b>1 400</b><b>1 600</b><b>1 800</b></div>
+            <div class="ptable__row"><span>Бритьё головы с распариванием</span><b>1 500</b><b>1 900</b><b>2 000</b></div>
+            <div class="ptable__row"><span>Бритьё лица с распариванием</span><b>1 300</b><b>1 700</b><b>2 000</b></div>
+          </div>
+          <div class="ptable" id="p-combo" role="tabpanel" aria-labelledby="b-combo" hidden>
+            <div class="ptable__row ptable__head"><span></span><span>Барбер</span><span>Старший</span><span>Топ</span></div>
+            <div class="ptable__row"><span>Стрижка + борода</span><b>2 700</b><b>3 100</b><b>3 500</b></div>
+            <div class="ptable__row"><span>Удлинённая стрижка + борода</span><b>3 000</b><b>—</b><b>4 300</b></div>
+            <div class="ptable__row"><span>Отец + сын (до 12 лет)</span><b>3 000</b><b>3 300</b><b>3 500</b></div>
+          </div>
+          <div class="ptable" id="p-care" role="tabpanel" aria-labelledby="b-care" hidden>
+            <div class="ptable__row ptable__head"><span></span><span>Барбер</span><span>Старший</span><span>Топ</span></div>
+            <div class="ptable__row"><span>Камуфляж седины (волосы)</span><b>1 400</b><b>1 600</b><b>1 800</b></div>
+            <div class="ptable__row"><span>Камуфляж седины (борода)</span><b>1 200</b><b>1 600</b><b>1 800</b></div>
+            <div class="ptable__row"><span>Уход за кожей головы Luxina</span><b>800</b><b>1 200</b><b>1 500</b></div>
+            <div class="ptable__row"><span>Уход за кожей лица Mr. Q</span><b>800</b><b>1 200</b><b>1 500</b></div>
+            <div class="ptable__row"><span>Чёрная маска + лимфодренажный массаж</span><b>800</b><b>1 300</b><b>1 500</b></div>
+            <div class="ptable__row"><span>Коррекция бровей</span><b>350</b><b>450</b><b>500</b></div>
+            <div class="ptable__row"><span>Воск (одна зона)</span><b>350</b><b>350</b><b>400</b></div>
+          </div>
+        </div>
+        <p class="note reveal">Цены — из вашей карточки на Zoon, ₽. Оплата картой, наличными, переводом или по QR-коду.</p>
+      </div>
+    </section>
+
+    <section class="section" id="space">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Барбершоп</p>
+          <h2>Светло, спокойно, по-мужски</h2>
+        </div>
+        <div class="gallery">
+          <img class="reveal g-big" src="img/chairs-window.webp" alt="Барберские кресла у окна" loading="lazy">
+          <img class="reveal" src="img/logo-window.webp" alt="Логотип The Mustache на витрине" loading="lazy">
+          <img class="reveal" src="img/products.webp" alt="Косметика для волос и бороды" loading="lazy">
+          <img class="reveal" src="img/lounge.webp" alt="Зона ожидания с диванами" loading="lazy">
+          <img class="reveal" src="img/wash.webp" alt="Мойка для головы" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--pearl" id="contacts">
+      <div class="container contacts">
+        <div class="reveal">
+          <p class="eyebrow">Контакты</p>
+          <h2>Ждём вас</h2>
+          <dl>
+            <dt>Адрес</dt><dd>Санкт-Петербург, ул. Бабушкина, 53<br>м. Ломоносовская — 0,9 км</dd>
+            <dt>Часы работы</dt><dd>Ежедневно 10:00–21:00</dd>
+            <dt>Телефон</dt><dd><a href="tel:+79112587388">+7 911 258-73-88</a></dd>
+          </dl>
+          <div class="contacts__btns">
+            <a class="btn btn--dark" href="https://wa.me/79112587388" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+            <a class="btn btn--line" href="tel:+79112587388">Позвонить</a>
+            <a class="btn btn--line" href="https://www.instagram.com/the.mustache.spb/" target="_blank" rel="noopener">@the.mustache.spb</a>
+          </div>
+        </div>
+        <div class="contacts__media reveal">
+          <div class="blade blade--photo blade--sm"><img src="img/facade.webp" alt="Вход в барбершоп The Mustache на ул. Бабушкина, 53"></div>
+          <iframe title="Карта: The Mustache" src="https://yandex.ru/map-widget/v1/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%91%D0%B0%D0%B1%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0%2C%2053&z=16" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo logo--footer"><svg class="logo__mark" aria-hidden="true"><use href="#stache"/></svg><span class="logo__text">The Mustache<small>barber shop</small></span></span>
+      <p>Это концепт: цены, адрес и фото взяты из вашей открытой карточки на Zoon. Тексты, мастеров и онлайн-запись подставим по вашим данным.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-bar">
+    <a href="https://wa.me/79112587388" target="_blank" rel="noopener">Записаться</a>
+    <a href="tel:+79112587388">Позвонить</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
