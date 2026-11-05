@@ -151,3 +151,14 @@ p { margin: 0 0 1em; }
   .mobile-bar a + a { background: var(--ink-2); }
   .footer { padding-bottom: 80px; }
 }
+
+/* Две точки */
+.points { padding-bottom: 0; }
+.points__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.point { padding: 34px; border: 2px solid var(--line); background: var(--ink-2); display: flex; flex-direction: column; }
+.point--alt { border-color: var(--accent); }
+.point h3 { font-size: clamp(26px, 3.4vw, 38px); }
+.point p { color: #c9c9cd; }
+.point__btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 10px; }
+.point__note { margin: 14px 0 0; font-size: 13px; color: var(--muted) !important; }
+@media (max-width: 720px) { .points__grid { grid-template-columns: 1fr; } .point { padding: 26px 20px; } }
