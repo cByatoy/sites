@@ -7,6 +7,8 @@
 - Клиенты — `agents/01-clients.md` + `agents/shared/client-intake-checklist.md`
 - Поиск — `agents/02-leads.md`
 - Сайты — `agents/03-sites.md`
+- Документы — `agents/04-documents.md`
+- Проверка (QA) — `agents/05-qa.md`
 
 Всегда соблюдай `agents/shared/rules.md`. Если роль не указана — спроси.
 
