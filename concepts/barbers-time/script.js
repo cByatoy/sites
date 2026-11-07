@@ -85,3 +85,17 @@ document.querySelectorAll('form.form').forEach((form) => {
     form.reset();
   });
 });
+
+// Cookie-баннер (заглушка концепта)
+(function () {
+  const banner = document.getElementById('cookie');
+  if (!banner) return;
+  let seen = false;
+  try { seen = localStorage.getItem('cookie-ok') === '1'; } catch (e) {}
+  if (!seen) banner.hidden = false;
+  const ok = banner.querySelector('[data-cookie-ok]');
+  if (ok) ok.addEventListener('click', () => {
+    banner.hidden = true;
+    try { localStorage.setItem('cookie-ok', '1'); } catch (e) {}
+  });
+})();
