@@ -8,3 +8,4 @@
 |---|---|---|
 | barbers-time | Barber's Time, ул. Шотмана, 11 | 03.11.2026 |
 | the-mustache | The Mustache, ул. Бабушкина, 53 | 04.11.2026 |
+| oldstyle | Барбершоп Oldstyle, Лучевая ул., 1А (рядом с Кипенью) | — |
