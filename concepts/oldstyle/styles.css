@@ -98,7 +98,7 @@ p { margin: 0 0 1em; }
 .menu__note { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
 
 /* Работы */
-.works { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 900px; }
 .works img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border: 6px solid #fff; box-shadow: 0 6px 18px rgb(23 20 15 / .15); filter: sepia(.12); transition: filter .3s; }
 .works img:hover { filter: none; }
 .works__more { margin: 26px 0 0; font-weight: 800; }
@@ -148,7 +148,8 @@ p { margin: 0 0 1em; }
   .perk { border-right: 0; border-bottom: 1px solid var(--line); }
   .perk:last-child { border-bottom: 0; }
   .menu { grid-template-columns: 1fr; }
-  .works { grid-template-columns: 1fr 1fr; }
+  .works { gap: 8px; }
+  .works img { border-width: 3px; }
 }
 @media (max-width: 720px) {
   .burger { display: block; }
