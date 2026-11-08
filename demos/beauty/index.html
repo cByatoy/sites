@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Студия «Полутон» — маникюр, брови и ресницы, Санкт-Петербург</title>
+  <meta name="description" content="Маникюр, педикюр, брови и ресницы. Гарантия на покрытие 7 дней, стерильные инструменты, онлайн-запись.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Студия «Полутон» — маникюр · брови · ресницы">
+  <meta property="og:description" content="Аккуратный маникюр с гарантией 7 дней. Онлайн-запись.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/hero.webp">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Полутон, на главную"><span class="logo__dot" aria-hidden="true"></span>Полутон</a>
+      <nav class="nav" id="nav">
+        <a href="#prices">Цены</a>
+        <a href="#masters">Мастера</a>
+        <a href="#works">Работы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a href="tel:+79000000000" class="header__phone">+7 900 000-00-00</a>
+      <a href="#booking" class="btn btn--small">Записаться</a>
+      <button class="burger" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <p class="eyebrow">маникюр · брови · ресницы</p>
+          <h1>Студия «Полутон»</h1>
+          <p class="lead">Аккуратный маникюр, который держится три недели. Брови и ресницы — в том же кресле, без спешки и с чашкой чая.</p>
+          <a class="rating" href="#reviews"><b>4,9</b><span class="rating__stars" aria-hidden="true">★★★★★</span><span>на Яндекс Картах · 214 отзывов</span></a>
+          <div class="hero__actions">
+            <a href="#booking" class="btn">Записаться онлайн</a>
+            <a href="https://wa.me/79000000000" class="btn btn--ghost" target="_blank" rel="noopener">Написать в WhatsApp</a>
+          </div>
+        </div>
+        <figure class="hero__photo reveal">
+          <img src="img/hero.webp" width="960" height="1200" alt="Рука с нюдовым маникюром на светлом пледе" fetchpriority="high">
+          <figcaption class="hero__badge"><b>7 дней</b>гарантия на покрытие</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="perks">
+      <div class="container perks__grid">
+        <div class="perk reveal"><span class="perk__icon" aria-hidden="true">✦</span><b>Стерильно</b><span>Инструменты из крафт-пакета вскрываем при вас</span></div>
+        <div class="perk reveal"><span class="perk__icon" aria-hidden="true">✦</span><b>Гарантия 7 дней</b><span>Скол или отслойка — исправим бесплатно</span></div>
+        <div class="perk reveal"><span class="perk__icon" aria-hidden="true">✦</span><b>Запись 24/7</b><span>Выберите мастера и время онлайн</span></div>
+        <div class="perk reveal"><span class="perk__icon" aria-hidden="true">✦</span><b>Без спешки</b><span>Между клиентами — 15 минут на уборку</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Прайс</p>
+          <h2>Цены без сюрпризов</h2>
+          <p>Цена окончательная: снятие старого покрытия уже включено.</p>
+        </div>
+        <div class="tabs reveal" data-tabs>
+          <div class="tabs__list" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="t-mani" id="b-mani">Маникюр</button>
+            <button role="tab" aria-selected="false" aria-controls="t-pedi" id="b-pedi">Педикюр</button>
+            <button role="tab" aria-selected="false" aria-controls="t-brows" id="b-brows">Брови</button>
+            <button role="tab" aria-selected="false" aria-controls="t-lash" id="b-lash">Ресницы</button>
+          </div>
+          <ul class="price" id="t-mani" role="tabpanel" aria-labelledby="b-mani">
+            <li><span>Маникюр без покрытия<small>45 мин</small></span><b>1 200 ₽</b></li>
+            <li><span>Маникюр + покрытие гель-лак<small>1 ч 30 мин</small></span><b>2 400 ₽</b></li>
+            <li><span>Укрепление ногтей гелем<small>+30 мин</small></span><b>+600 ₽</b></li>
+            <li><span>Френч или дизайн на 2 ногтя<small>+20 мин</small></span><b>+400 ₽</b></li>
+            <li><span>Наращивание ногтей<small>2 ч 30 мин</small></span><b>3 900 ₽</b></li>
+            <li><span>Мужской маникюр<small>45 мин</small></span><b>1 400 ₽</b></li>
+          </ul>
+          <ul class="price" id="t-pedi" role="tabpanel" aria-labelledby="b-pedi" hidden>
+            <li><span>Педикюр без покрытия<small>1 ч</small></span><b>2 000 ₽</b></li>
+            <li><span>Педикюр + покрытие гель-лак<small>1 ч 30 мин</small></span><b>2 900 ₽</b></li>
+            <li><span>Покрытие гель-лак на пальчики<small>45 мин</small></span><b>1 500 ₽</b></li>
+            <li><span>Маникюр + педикюр в 4 руки<small>1 ч 40 мин</small></span><b>5 000 ₽</b></li>
+          </ul>
+          <ul class="price" id="t-brows" role="tabpanel" aria-labelledby="b-brows" hidden>
+            <li><span>Коррекция формы бровей<small>30 мин</small></span><b>800 ₽</b></li>
+            <li><span>Коррекция + окрашивание<small>45 мин</small></span><b>1 400 ₽</b></li>
+            <li><span>Долговременная укладка бровей<small>1 ч</small></span><b>2 200 ₽</b></li>
+          </ul>
+          <ul class="price" id="t-lash" role="tabpanel" aria-labelledby="b-lash" hidden>
+            <li><span>Ламинирование ресниц<small>1 ч</small></span><b>2 300 ₽</b></li>
+            <li><span>Наращивание, классика<small>2 ч</small></span><b>2 800 ₽</b></li>
+            <li><span>Наращивание, объём 2D<small>2 ч 30 мин</small></span><b>3 300 ₽</b></li>
+            <li><span>Снятие наращенных ресниц<small>20 мин</small></span><b>400 ₽</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="guarantee">
+      <div class="container guarantee__inner reveal">
+        <div class="guarantee__seal" aria-hidden="true"><b>7</b><span>дней</span></div>
+        <div>
+          <h2>Гарантия на покрытие</h2>
+          <p>Если в течение 7 дней появился скол, отслойка или трещина — напишите нам, исправим бесплатно в удобное время. Достаточно фото в WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="masters">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Команда</p>
+          <h2>Мастера</h2>
+        </div>
+        <div class="masters">
+          <article class="master reveal">
+            <span class="master__mono" aria-hidden="true">А</span>
+            <h3>Анна</h3>
+            <p class="master__role">Маникюр, наращивание</p>
+            <p>Стаж 7 лет. Любит нюд и тонкий френч, делает идеальные блики.</p>
+          </article>
+          <article class="master reveal">
+            <span class="master__mono" aria-hidden="true">М</span>
+            <h3>Марина</h3>
+            <p class="master__role">Маникюр и педикюр</p>
+            <p>Стаж 5 лет. Аппаратный педикюр, работа со сложными стопами.</p>
+          </article>
+          <article class="master reveal">
+            <span class="master__mono" aria-hidden="true">В</span>
+            <h3>Вера</h3>
+            <p class="master__role">Брови и ресницы</p>
+            <p>Стаж 6 лет. Подбирает форму бровей под черты лица, ламинирование.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="works">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Портфолио</p>
+          <h2>Наши работы</h2>
+        </div>
+        <div class="gallery">
+          <img class="reveal" src="img/work-1.webp" width="720" height="900" alt="Нюдовый маникюр с точечным дизайном" loading="lazy">
+          <img class="reveal" src="img/work-2.webp" width="720" height="900" alt="Красный гель-лак" loading="lazy">
+          <img class="reveal" src="img/work-3.webp" width="720" height="900" alt="Нанесение тёмного лака" loading="lazy">
+          <img class="reveal" src="img/work-4.webp" width="720" height="900" alt="Палитра оттенков гель-лака" loading="lazy">
+          <img class="reveal" src="img/work-5.webp" width="720" height="900" alt="Педикюр с белым френчем" loading="lazy">
+          <img class="reveal" src="img/work-6.webp" width="720" height="900" alt="Маникюр в процессе" loading="lazy">
+        </div>
+        <div class="brows reveal">
+          <img src="img/brows.webp" width="960" height="720" alt="Мастер оформляет брови" loading="lazy">
+          <div>
+            <h3>Брови и ресницы</h3>
+            <p>Коррекция, окрашивание, долговременная укладка, ламинирование и наращивание ресниц — можно в один визит с маникюром.</p>
+            <a href="#booking" class="btn btn--ghost">Выбрать время</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Яндекс Карты</p>
+          <h2>4,9 — 214 отзывов</h2>
+        </div>
+        <div class="reviews">
+          <blockquote class="review reveal"><p>«Хожу к Анне больше года — покрытие держится три недели, ни одного скола. И всегда предложат чай».</p><footer>Екатерина</footer></blockquote>
+          <blockquote class="review reveal"><p>«Сделали педикюр и маникюр в четыре руки за полтора часа. Очень удобно в обеденный перерыв».</p><footer>Ольга</footer></blockquote>
+          <blockquote class="review reveal"><p>«Вера подобрала форму бровей, которую я не могла найти годами. Теперь только к ней».</p><footer>Алина</footer></blockquote>
+        </div>
+        <p class="reviews__note reveal">Здесь будет официальный виджет отзывов Яндекса — отзывы обновляются сами.</p>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="booking">
+      <div class="container booking reveal">
+        <div>
+          <p class="eyebrow">Онлайн-запись</p>
+          <h2>Выберите мастера и время</h2>
+          <p>Запись открыта на 30 дней вперёд. Напомним о визите за сутки.</p>
+        </div>
+        <div class="booking__actions">
+          <button class="btn" type="button" data-booking>Открыть онлайн-запись</button>
+          <a class="btn btn--ghost" href="https://wa.me/79000000000" target="_blank" rel="noopener">Написать в WhatsApp</a>
+          <a class="btn btn--ghost" href="tel:+79000000000">Позвонить</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container contacts">
+        <div class="reveal">
+          <p class="eyebrow">Контакты</p>
+          <h2>Ждём вас</h2>
+          <dl>
+            <dt>Адрес</dt><dd>Санкт-Петербург, ул. Примерная, 1</dd>
+            <dt>Часы работы</dt><dd>Ежедневно 10:00–21:00</dd>
+            <dt>Телефон</dt><dd><a href="tel:+79000000000">+7 900 000-00-00</a></dd>
+          </dl>
+          <div class="contacts__btns">
+            <a class="btn" href="#booking">Записаться</a>
+            <a class="btn btn--ghost" href="https://wa.me/79000000000" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="contacts__map reveal">
+          <iframe title="Карта: студия «Полутон»" src="https://yandex.ru/map-widget/v1/?ll=30.3609%2C59.9311&amp;z=15&amp;pt=30.3609%2C59.9311%2Cpm2rdm" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>ИП Иванова А.А., ИНН 000000000000 · <a href="privacy.html">Политика конфиденциальности</a> · © <span data-year></span> Студия «Полутон»</p>
+      <p class="footer__note">Демо-сайт: студия, мастера, отзывы, адрес и реквизиты вымышлены. Фото — Pexels.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-bar">
+    <a href="#booking">Записаться</a>
+    <a href="https://wa.me/79000000000" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
+  <dialog class="modal" id="booking-modal" aria-labelledby="booking-title">
+    <form method="dialog">
+      <h3 id="booking-title">Онлайн-запись</h3>
+      <p>Здесь откроется виджет онлайн-записи YCLIENTS или DIKIDI: выбор услуги, мастера и времени.</p>
+      <p class="modal__note">Демо: запись не работает.</p>
+      <button class="btn" value="close">Понятно</button>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -18,6 +18,14 @@ https://www.pexels.com/license/
 | coffee/img/interior.webp | 34094296 |
 | coffee/img/bar.webp | 36871073 |
 | coffee/img/breakfast.webp | 30573107 |
+| beauty/img/hero.webp | 34373400 |
+| beauty/img/work-1.webp | 3557600 |
+| beauty/img/work-2.webp | 3997381 |
+| beauty/img/work-3.webp | 4677845 |
+| beauty/img/work-4.webp | 34930138 |
+| beauty/img/work-5.webp | 4963837 |
+| beauty/img/work-6.webp | 22668317 |
+| beauty/img/brows.webp | 6135623 |
 | coffee/img/counter.webp | 29843736 |
 
 Страница фото: https://www.pexels.com/photo/<ID>/
