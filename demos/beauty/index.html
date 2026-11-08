@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="topwrap">
+  <div class="demo-bar">Демо-сайт: студия, мастера и отзывы вымышлены</div>
   <header class="header">
     <div class="container header__inner">
       <a href="#top" class="logo" aria-label="Полутон, на главную"><span class="logo__dot" aria-hidden="true"></span>Полутон</a>
@@ -32,6 +34,7 @@
       <button class="burger" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span></button>
     </div>
   </header>
+  </div>
 
   <main id="top">
     <section class="hero">
@@ -40,7 +43,7 @@
           <p class="eyebrow">маникюр · брови · ресницы</p>
           <h1>Студия «Полутон»</h1>
           <p class="lead">Аккуратный маникюр, который держится три недели. Брови и ресницы — в том же кресле, без спешки и с чашкой чая.</p>
-          <a class="rating" href="#reviews"><b>4,9</b><span class="rating__stars" aria-hidden="true">★★★★★</span><span>на Яндекс Картах · 214 отзывов</span></a>
+          <a class="rating" href="#reviews"><b>4,9</b><span class="rating__stars" aria-hidden="true">★★★★★</span><span>214 отзывов — пример блока рейтинга</span></a>
           <div class="hero__actions">
             <a href="#booking" class="btn">Записаться онлайн</a>
             <a href="https://wa.me/79000000000" class="btn btn--ghost" target="_blank" rel="noopener">Написать в WhatsApp</a>
@@ -172,7 +175,7 @@
     <section class="section" id="reviews">
       <div class="container">
         <div class="section__head reveal">
-          <p class="eyebrow">Яндекс Карты</p>
+          <p class="eyebrow">Пример блока отзывов</p>
           <h2>4,9 — 214 отзывов</h2>
         </div>
         <div class="reviews">
@@ -215,7 +218,7 @@
           </div>
         </div>
         <div class="contacts__map reveal">
-          <iframe title="Карта: студия «Полутон»" src="https://yandex.ru/map-widget/v1/?ll=30.3609%2C59.9311&amp;z=15&amp;pt=30.3609%2C59.9311%2Cpm2rdm" loading="lazy"></iframe>
+          <div class="map-stub"><span class="map-stub__pin" aria-hidden="true"></span><p>Здесь будет карта Яндекса с вашей точкой</p></div>
         </div>
       </div>
     </section>
