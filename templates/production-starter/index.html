@@ -38,6 +38,14 @@
       <a class="btn btn--small" href="#request" data-goal="click_booking">Записаться</a>
       <button class="burger" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span></button>
     </div>
+    <!-- Cookie-баннер: аналитика и сторонние виджеты включаются только после «Принять». -->
+    <div class="cookie" id="cookie" role="region" aria-label="Cookie" hidden>
+      <p>Используем cookie и Яндекс Метрику. <a href="privacy.html#cookie">Подробнее</a></p>
+      <div class="cookie__btns">
+        <button class="btn btn--small btn--ghost" type="button" data-cookie-reject>Только нужные</button>
+        <button class="btn btn--small" type="button" data-cookie-accept>Принять</button>
+      </div>
+    </div>
   </header>
 
   <main id="main">
@@ -160,17 +168,10 @@
 
   <div class="mobile-bar">
     <a href="tel:+70000000000" data-goal="click_phone">Позвонить</a>
+    <a href="https://wa.me/70000000000" target="_blank" rel="noopener" data-goal="click_whatsapp">WhatsApp</a>
     <a href="#request" data-goal="click_booking">Записаться</a>
   </div>
 
-  <!-- Cookie-баннер: аналитика и сторонние виджеты включаются только после «Принять». -->
-  <div class="cookie" id="cookie" role="region" aria-label="Cookie" hidden>
-    <p>Используем cookie и Яндекс Метрику. <a href="privacy.html#cookie">Подробнее</a></p>
-    <div class="cookie__btns">
-      <button class="btn btn--small btn--ghost" type="button" data-cookie-reject>Только нужные</button>
-      <button class="btn btn--small" type="button" data-cookie-accept>Принять</button>
-    </div>
-  </div>
 
   <script>
     // Настройки сайта — меняются здесь

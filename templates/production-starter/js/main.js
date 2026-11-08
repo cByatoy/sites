@@ -33,7 +33,13 @@
     b.addEventListener('click', function () { saveConsent('all'); showBanner(false); applyConsent('all'); });
   });
   document.querySelectorAll('[data-cookie-reject]').forEach(function (b) {
-    b.addEventListener('click', function () { saveConsent('necessary'); showBanner(false); });
+    b.addEventListener('click', function () {
+      var was = readConsent();
+      saveConsent('necessary');
+      showBanner(false);
+      /* Метрика и виджеты уже загружены — перезагружаем страницу, чтобы они сразу отключились */
+      if (was === 'all' || metrikaLoaded) location.reload();
+    });
   });
   document.querySelectorAll('[data-cookie-settings]').forEach(function (b) {
     b.addEventListener('click', function () { showBanner(true); });

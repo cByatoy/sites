@@ -39,7 +39,7 @@ p { margin: 0 0 1em; }
 .linklike { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
 
 /* Шапка */
-.header { position: sticky; top: 0; z-index: 20; background: rgb(250 248 245 / .94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.header { position: sticky; top: 0; z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); } /* без backdrop-filter: иначе fixed-баннер внутри шапки «привяжется» к ней */
 .header__inner { display: flex; align-items: center; gap: 22px; height: 66px; }
 .logo { font-size: 20px; font-weight: 800; text-decoration: none; }
 .nav { display: flex; gap: 22px; margin-left: auto; }
@@ -122,7 +122,7 @@ p { margin: 0 0 1em; }
   .cards { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
-  .header .btn--small { display: none; }
+  .header__inner > .btn--small { display: none; }
   .burger { display: block; }
   .nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; padding: 6px 16px 16px; background: var(--bg); border-bottom: 1px solid var(--line); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .2s, transform .2s, visibility .2s; }
   .nav.is-open { opacity: 1; visibility: visible; transform: none; }
@@ -131,15 +131,17 @@ p { margin: 0 0 1em; }
   .price { padding: 0 16px; }
   .embed--reviews { height: 520px; }
   .embed--map { height: 300px; }
-  .mobile-bar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; }
-  .mobile-bar a { display: grid; place-items: center; min-height: 52px; background: var(--ink); color: #fff; font-weight: 700; text-decoration: none; }
-  .mobile-bar a + a { background: var(--accent); }
-  .cookie { left: 8px; right: 8px; width: auto; bottom: 60px; grid-template-columns: 1fr auto; align-items: center; padding: 8px 8px 8px 12px; font-size: 12px; }
+  .mobile-bar { display: grid; grid-template-columns: 1fr 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; }
+  .mobile-bar a { display: grid; place-items: center; min-height: 52px; font-size: 14px; background: var(--ink); color: #fff; font-weight: 700; text-decoration: none; }
+  .mobile-bar a + a { background: #2c2925; }
+  .mobile-bar a:last-child { background: var(--accent); }
+  /* баннер — полоса прямо под шапкой (внутри неё), сдвигает контент, а не перекрывает его */
+  .cookie { position: static; width: auto; grid-template-columns: 1fr auto; align-items: center; gap: 8px; padding: 6px 16px; border: 0; border-top: 1px solid var(--line); border-radius: 0; box-shadow: none; background: var(--alt); font-size: 12px; }
   .cookie__btns .btn--small { min-height: 40px; padding: 0 12px; font-size: 12px; }
   .footer { padding-bottom: 80px; }
 }
 @media (max-width: 380px) {
-  .cookie { gap: 8px; padding: 6px 6px 6px 10px; font-size: 11px; }
+  .cookie { gap: 6px; padding: 6px 8px 6px 12px; font-size: 11px; }
   .cookie__btns { gap: 4px; }
   .cookie__btns .btn--small { padding: 0 9px; font-size: 11px; }
 }
