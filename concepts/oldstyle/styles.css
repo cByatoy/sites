@@ -92,6 +92,9 @@ p { margin: 0 0 1em; }
 .price li { display: flex; align-items: baseline; gap: 10px; padding: 12px 0; font-size: 17px; font-weight: 500; }
 .price i { flex: 1; min-width: 20px; border-bottom: 2px dotted rgb(23 20 15 / .35); transform: translateY(-4px); }
 .price b { font-family: var(--head); font-size: 19px; white-space: nowrap; }
+.price small { display: block; margin-top: 2px; font-size: 13px; color: var(--muted); }
+.menu__col { min-width: 0; }
+.price span { min-width: 0; overflow-wrap: break-word; hyphens: auto; }
 .menu__note { margin: 18px 0 0; color: var(--muted); font-size: 14px; }
 
 /* Работы */
@@ -151,6 +154,8 @@ p { margin: 0 0 1em; }
   .facts span { font-size: 12px; }
   .hero__actions .btn { flex: 1 1 auto; }
   .price li { font-size: 16px; }
+  .menu { padding: 20px 16px; outline-offset: -6px; }
+  .price i { min-width: 8px; }
   .reviews__widget { height: 560px; }
   .contacts__map iframe { height: 300px; }
   .mobile-bar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; }
