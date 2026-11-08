@@ -109,6 +109,15 @@ p { margin: 0 0 1em; }
 .reviews__score b { font: 900 64px/1 var(--head); }
 .stars { color: #e4a11b; font-size: 24px; letter-spacing: 3px; }
 .reviews__intro p { color: var(--ink-2); }
+.scores { display: flex; gap: 0; padding: 0; margin: 0 0 22px; list-style: none; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.scores li { flex: 1; padding: 12px 10px 12px 0; }
+.scores li + li { padding-left: 12px; border-left: 1px solid var(--line); }
+.scores b { display: block; font: 900 24px/1.1 var(--head); }
+.scores span { font-size: 13px; color: var(--muted); }
+.quote { margin: 0 0 16px; padding: 16px 18px; background: var(--paper); border-left: 4px solid var(--red); }
+.quote p { margin: 0 0 6px; font-size: 16px; }
+.quote footer { font-size: 13px; font-weight: 700; color: var(--muted); }
+.reviews__intro .btn { margin-top: 8px; }
 .reviews__widget { height: 620px; background: #fff; border: 1px solid #e6e6e6; border-radius: 8px; overflow: hidden; }
 .reviews__widget iframe { width: 100%; height: 100%; border: 0; }
 
