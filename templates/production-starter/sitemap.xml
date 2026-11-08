@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Подставить домен и дату запуска (ГГГГ-ММ-ДД). Добавить строку для каждой страницы. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://{{ДОМЕН}}/</loc><lastmod>{{ГГГГ-ММ-ДД}}</lastmod></url>
+  <url><loc>https://{{ДОМЕН}}/privacy.html</loc><lastmod>{{ГГГГ-ММ-ДД}}</lastmod></url>
+  <url><loc>https://{{ДОМЕН}}/consent.html</loc><lastmod>{{ГГГГ-ММ-ДД}}</lastmod></url>
+</urlset>

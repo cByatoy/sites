@@ -1,0 +1,6 @@
+# БОЕВОЙ robots.txt — подставить домен. Пока сайт на тестовом адресе, оставьте «Disallow: /».
+User-agent: *
+Disallow: /send.php
+# Disallow: /
+
+Sitemap: https://{{ДОМЕН}}/sitemap.xml

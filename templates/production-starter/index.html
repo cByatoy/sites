@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ЗАГОТОВКА БОЕВОГО САЙТА. Все места для замены помечены {{…}} — найти: grep -rn "{{" . -->
+  <title>{{НАЗВАНИЕ}} — {{ЧТО ДЕЛАЕТЕ}} в {{ГОРОД}}</title>
+  <meta name="description" content="{{ОПИСАНИЕ ДО 160 СИМВОЛОВ: услуга, район, главное преимущество, цена от}}">
+  <!-- УБРАТЬ строку ниже при запуске на боевом домене (заготовка закрыта от индексации) -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://{{ДОМЕН}}/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="{{НАЗВАНИЕ}}">
+  <meta property="og:title" content="{{НАЗВАНИЕ}} — {{ЧТО ДЕЛАЕТЕ}}">
+  <meta property="og:description" content="{{КОРОТКОЕ ОПИСАНИЕ ДЛЯ ПРЕВЬЮ В МЕССЕНДЖЕРАХ}}">
+  <meta property="og:url" content="https://{{ДОМЕН}}/">
+  <meta property="og:image" content="https://{{ДОМЕН}}/img/og.jpg">
+  <meta name="theme-color" content="#1f1d1a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">{{НАЗВАНИЕ}}</a>
+      <nav class="nav" id="nav">
+        <a href="#prices" data-goal="nav_prices">Цены</a>
+        <a href="#about">О нас</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="header__phone" href="tel:+70000000000" data-goal="click_phone">+7 (000) 000-00-00</a>
+      <a class="btn btn--small" href="#request" data-goal="click_booking">Записаться</a>
+      <button class="burger" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div>
+          <p class="eyebrow">{{КАТЕГОРИЯ · РАЙОН}}</p>
+          <h1>{{ГЛАВНЫЙ ЗАГОЛОВОК: ЧТО И ДЛЯ КОГО}}</h1>
+          <p class="lead">{{1–2 ПРЕДЛОЖЕНИЯ: ПОЧЕМУ К ВАМ}}</p>
+          <div class="hero__actions">
+            <!-- Онлайн-запись: ссылка YCLIENTS/DIKIDI клиента или якорь на форму -->
+            <a class="btn" href="#request" data-goal="click_booking">Записаться</a>
+            <a class="btn btn--ghost" href="https://wa.me/70000000000" target="_blank" rel="noopener" data-goal="click_whatsapp">Написать в WhatsApp</a>
+          </div>
+          <ul class="facts">
+            <li><b>{{4,9}}</b><span>на Яндекс Картах</span></li>
+            <li><b>{{от 0 ₽}}</b><span>{{главная услуга}}</span></li>
+            <li><b>{{10–21}}</b><span>{{ежедневно}}</span></li>
+          </ul>
+        </div>
+        <img class="hero__img" src="img/hero.svg" width="880" height="1100" alt="{{ОПИСАНИЕ ФОТО}}" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="container">
+        <h2>Цены</h2>
+        <p class="muted">{{Цены окончательные / что входит}}</p>
+        <ul class="price">
+          <li><span>{{Услуга 1}}<small>{{длительность}}</small></span><b>{{0 ₽}}</b></li>
+          <li><span>{{Услуга 2}}<small>{{длительность}}</small></span><b>{{0 ₽}}</b></li>
+          <li><span>{{Услуга 3}}<small>{{длительность}}</small></span><b>{{0 ₽}}</b></li>
+          <li><span>{{Услуга 4}}<small>{{длительность}}</small></span><b>{{0 ₽}}</b></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="about">
+      <div class="container">
+        <h2>{{Почему мы}}</h2>
+        <div class="cards">
+          <div class="card"><h3>{{Преимущество 1}}</h3><p>{{Пояснение с фактом/цифрой}}</p></div>
+          <div class="card"><h3>{{Преимущество 2}}</h3><p>{{Пояснение с фактом/цифрой}}</p></div>
+          <div class="card"><h3>{{Преимущество 3}}</h3><p>{{Пояснение с фактом/цифрой}}</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <h2>Отзывы</h2>
+        <!-- Виджет отзывов Яндекса. ID организации — из ссылки на карточку: yandex.ru/maps/org/<имя>/<ID>/
+             Загружается только после согласия на cookie (это сторонний сервис). -->
+        <div class="embed embed--reviews" data-consent-embed data-src="https://yandex.ru/maps-reviews-widget/{{ID_ОРГАНИЗАЦИИ}}?comments" data-title="Отзывы на Яндекс Картах">
+          <div class="embed__placeholder">
+            <p>Отзывы загружаются с Яндекс Карт.</p>
+            <button class="btn btn--ghost" type="button" data-embed-load>Показать отзывы</button>
+            <a href="https://yandex.ru/maps/org/{{ID_ОРГАНИЗАЦИИ}}/reviews/" target="_blank" rel="noopener">Открыть на Яндекс Картах →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="request">
+      <div class="container request">
+        <div>
+          <h2>Оставьте заявку</h2>
+          <p class="muted">Перезвоним в течение {{15 минут}} в рабочее время.</p>
+        </div>
+        <!-- Форма отправляется на send.php (PHP-скрипт на российском хостинге Beget/Timeweb), письмо приходит на e-mail клиента.
+             Настройка — в README, раздел «Форма». -->
+        <form class="form" action="send.php" method="post" novalidate data-form>
+          <label>Имя<input type="text" name="name" autocomplete="name" required maxlength="80"></label>
+          <label>Телефон<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required></label>
+          <!-- защита от спама: поле скрыто от людей -->
+          <label class="hp" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <label class="check"><input type="checkbox" name="consent" value="1" required>
+            <span>Даю <a href="consent.html" target="_blank">согласие на обработку персональных данных</a> в соответствии с <a href="privacy.html" target="_blank">политикой конфиденциальности</a></span></label>
+          <button class="btn" type="submit" data-goal="form_submit">Отправить</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container contacts">
+        <div>
+          <h2>Контакты</h2>
+          <dl>
+            <dt>Адрес</dt><dd>{{Город, улица, дом, этаж/вход}}</dd>
+            <dt>Часы работы</dt><dd>{{Пн–Вс 10:00–21:00}}</dd>
+            <dt>Телефон</dt><dd><a href="tel:+70000000000" data-goal="click_phone">+7 (000) 000-00-00</a></dd>
+          </dl>
+          <div class="contacts__btns">
+            <a class="btn" href="https://yandex.ru/maps/org/{{ID_ОРГАНИЗАЦИИ}}/" target="_blank" rel="noopener" data-goal="click_route">Маршрут</a>
+            <a class="btn btn--ghost" href="https://wa.me/70000000000" target="_blank" rel="noopener" data-goal="click_whatsapp">WhatsApp</a>
+            <a class="btn btn--ghost" href="https://t.me/{{TELEGRAM}}" target="_blank" rel="noopener" data-goal="click_telegram">Telegram</a>
+          </div>
+        </div>
+        <!-- Карта Яндекса: координаты долгота,широта (ll и pt). Загружается только после согласия на cookie. -->
+        <div class="embed embed--map" data-consent-embed data-src="https://yandex.ru/map-widget/v1/?ll={{ДОЛГОТА}}%2C{{ШИРОТА}}&amp;z=16&amp;pt={{ДОЛГОТА}}%2C{{ШИРОТА}}%2Cpm2rdm" data-title="Карта">
+          <div class="embed__placeholder">
+            <p>Карта загружается с Яндекс Карт.</p>
+            <button class="btn btn--ghost" type="button" data-embed-load>Показать карту</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p><b>{{НАЗВАНИЕ}}</b> · {{Адрес}} · <a href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+      <!-- Реквизиты: ИП — ФИО и ИНН (ОГРНИП по желанию); ООО — полное название, ИНН, ОГРН -->
+      <p>{{ИП Фамилия Имя Отчество}}, ИНН {{000000000000}}, ОГРНИП {{000000000000000}}</p>
+      <p><a href="privacy.html">Политика конфиденциальности</a> · <a href="consent.html">Согласие на обработку персональных данных</a> · <button class="linklike" type="button" data-cookie-settings>Настройки cookie</button></p>
+      <p class="footer__copy">© <span data-year></span> {{НАЗВАНИЕ}}</p>
+    </div>
+  </footer>
+
+  <div class="mobile-bar">
+    <a href="tel:+70000000000" data-goal="click_phone">Позвонить</a>
+    <a href="#request" data-goal="click_booking">Записаться</a>
+  </div>
+
+  <!-- Cookie-баннер: аналитика и сторонние виджеты включаются только после «Принять». -->
+  <div class="cookie" id="cookie" role="region" aria-label="Cookie" hidden>
+    <p>Используем cookie и Яндекс Метрику. <a href="privacy.html#cookie">Подробнее</a></p>
+    <div class="cookie__btns">
+      <button class="btn btn--small btn--ghost" type="button" data-cookie-reject>Только нужные</button>
+      <button class="btn btn--small" type="button" data-cookie-accept>Принять</button>
+    </div>
+  </div>
+
+  <script>
+    // Настройки сайта — меняются здесь
+    window.SITE_CONFIG = {
+      metrikaId: 0, // {{ID_СЧЁТЧИКА_МЕТРИКИ}} — число из metrika.yandex.ru; 0 = Метрика выключена
+      formEndpoint: 'send.php'
+    };
+  </script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
