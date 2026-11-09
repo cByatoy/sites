@@ -212,9 +212,12 @@ p { margin: 0 0 1em; }
 .legal .muted { color: var(--muted); }
 
 /* Акция −30% на первый визит */
-.promo { display: inline-flex; align-items: baseline; gap: 10px; margin: 0 0 16px; padding: 8px 16px; border: 1px solid var(--gold); border-radius: 4px; background: rgb(232 192 125 / .12); color: #fff; font-weight: 600; font-size: 16px; }
+.promos { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.promo { display: inline-flex; align-items: baseline; gap: 10px; margin: 0; padding: 8px 16px; border: 1px solid var(--gold); border-radius: 4px; background: rgb(232 192 125 / .12); color: #fff; font-weight: 600; font-size: 16px; }
 .promo b { font: 900 22px/1 var(--head); color: var(--gold); }
-.price-promo { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin: -12px 0 28px; padding: 14px 18px; background: var(--ink); color: #fff; border-left: 4px solid var(--gold); font-weight: 600; }
+.price-promos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: -12px 0 28px; }
+@media (max-width: 720px) { .price-promos { grid-template-columns: 1fr; } }
+.price-promo { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin: 0; padding: 14px 18px; background: var(--ink); color: #fff; border-left: 4px solid var(--gold); font-weight: 600; }
 .price-promo b { font: 900 24px/1 var(--head); color: var(--gold); }
 
 /* Обучение барберов — в стиле флаера: чёрный + золото */
