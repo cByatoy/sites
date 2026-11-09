@@ -234,6 +234,7 @@ p { margin: 0 0 1em; }
 .training__job { padding: 14px 16px; border: 1px dashed rgb(232 192 125 / .6); color: #f3e3c3; }
 .training .btn { margin-top: 6px; }
 .training__photos { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.training__photos img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid rgb(232 192 125 / .4); }
 .training__ph { display: grid; place-items: center; aspect-ratio: 4 / 3; border: 1px solid rgb(232 192 125 / .4); background: repeating-linear-gradient(45deg, #141415 0 12px, #18181a 12px 24px); }
 .training__ph span { color: rgb(232 192 125 / .75); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .training__note { grid-column: 1 / -1; margin: 4px 0 0; color: var(--muted); font-size: 13px; text-align: center; }
