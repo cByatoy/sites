@@ -73,7 +73,7 @@ p { margin: 0 0 1em; }
 .award::before { content: '✦ '; color: var(--brass); }
 .hero__photo { margin: 0; position: relative; width: 100%; max-width: 440px; justify-self: end; }
 .hero__photo::before { content: ''; position: absolute; inset: 14px -14px -14px 14px; border: 2px solid var(--ink); }
-.hero__photo img { position: relative; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; filter: sepia(.18) contrast(1.03); }
+.hero__photo img { position: relative; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 66% 50%; filter: sepia(.18) contrast(1.03); }
 
 /* Полоса «барбер-пол» */
 .pole { height: 14px; background: repeating-linear-gradient(-45deg, var(--red) 0 14px, var(--paper) 14px 28px, var(--ink) 28px 42px, var(--paper) 42px 56px); }
@@ -173,3 +173,4 @@ p { margin: 0 0 1em; }
   .mobile-bar a + a { background: var(--ink); }
   .footer { padding-bottom: 84px; }
 }
+@media (max-width: 380px) { .mobile-bar a { padding: 16px 6px; font-size: 13px; letter-spacing: .02em; } }
