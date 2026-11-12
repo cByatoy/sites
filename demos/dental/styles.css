@@ -185,12 +185,13 @@ p { margin: 0 0 1em; }
 @media (max-width: 760px) {
   .topbar__inner { flex-direction: column; gap: 0; text-align: center; }
   .burger { display: block; }
+  /* меню прячется целиком: прозрачность + visibility, без выезда из-под шапки */
   .nav {
-    position: fixed; inset: 72px 0 auto; flex-direction: column; gap: 0; padding: 8px 16px 24px;
+    position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; padding: 8px 16px 24px;
     background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 20px 40px rgb(0 0 0 / .08);
-    transform: translateY(-130%); transition: transform .3s; z-index: -1;
+    opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .2s, transform .2s, visibility .2s;
   }
-  .nav.is-open { transform: none; }
+  .nav.is-open { opacity: 1; visibility: visible; transform: none; }
   .nav a { padding: 14px 0; font-size: 18px; color: var(--text); border-bottom: 1px solid var(--line); }
   .hero__art { max-width: 300px; }
   .float { padding: 10px 14px; }
@@ -215,3 +216,16 @@ p { margin: 0 0 1em; }
 .clinic figcaption { color: var(--muted); font-size: 15px; font-weight: 600; }
 @media (max-width: 960px) { .clinic__grid { grid-template-columns: 1fr 1fr; } .clinic__tall { grid-column: span 2; max-height: 300px; } }
 @media (max-width: 760px) { .clinic__grid { grid-template-columns: 1fr; } .clinic__tall { grid-column: auto; max-height: 260px; } }
+
+/* Демо-плашка, предупреждение у цен, документы врачей, заглушки виджетов */
+.demo-bar { padding: 8px 16px; background: var(--accent-dark); color: #fff; text-align: center; font-size: 13px; font-weight: 700; line-height: 1.35; }
+.warning--prices { margin: 28px 0 0; padding: 14px 16px; border: 2px solid var(--text); border-radius: 12px; color: var(--text); text-align: center; font-size: clamp(14px, 2vw, 18px); }
+.doctor__docs { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+.eyebrow { margin: 0 0 8px; color: var(--accent); font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.widget-stub { display: grid; justify-items: center; gap: 8px; padding: 48px 24px; text-align: center; background: #fff; border: 2px dashed var(--line); border-radius: var(--radius); }
+.widget-stub p { margin: 0; font-size: 18px; font-weight: 700; }
+.widget-stub__stars { color: #e3a52b; font-size: 22px; letter-spacing: 3px; }
+.map-stub { display: grid; place-content: center; justify-items: center; gap: 12px; height: 100%; padding: 24px; text-align: center; color: var(--muted);
+  background: linear-gradient(90deg, rgb(16 41 43 / .05) 1px, transparent 1px) 0 0 / 40px 40px, linear-gradient(rgb(16 41 43 / .05) 1px, transparent 1px) 0 0 / 40px 40px, var(--tint); }
+.map-stub p { margin: 0; font-weight: 700; }
+.map-stub__pin { width: 28px; height: 28px; border-radius: 50% 50% 50% 0; background: var(--accent); transform: rotate(-45deg); }
