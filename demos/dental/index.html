@@ -37,6 +37,7 @@
         <a href="#contacts">Контакты</a>
       </nav>
       <a href="tel:+78120000000" class="header__phone">+7 (812) 000-00-00</a>
+      <a href="https://wa.me/79000000000" class="header__wa" target="_blank" rel="noopener">WhatsApp</a>
       <button class="burger" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span></button>
     </div>
   </header>
@@ -226,7 +227,7 @@
         <div class="reveal">
           <h2>Запишитесь на бесплатную консультацию</h2>
           <p>Оставьте телефон — администратор перезвонит в течение 15 минут в рабочее время и подберёт удобное время.</p>
-          <p class="booking__phone">или позвоните: <a href="tel:+78120000000">+7 (812) 000-00-00</a></p>
+          <p class="booking__phone">или позвоните: <a href="tel:+78120000000">+7 (812) 000-00-00</a> · <a href="https://wa.me/79000000000" target="_blank" rel="noopener">написать в WhatsApp</a></p>
         </div>
         <form class="form reveal" novalidate>
           <label>Имя<input name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label>
@@ -251,7 +252,7 @@
           <dl class="contacts__list">
             <dt>Адрес</dt><dd>Санкт-Петербург, ул. Примерная, 1</dd>
             <dt>Часы работы</dt><dd>Пн–Сб 9:00–21:00<br>Вс 10:00–18:00</dd>
-            <dt>Телефон</dt><dd><a href="tel:+78120000000">+7 (812) 000-00-00</a></dd>
+            <dt>Телефон</dt><dd><a href="tel:+78120000000">+7 (812) 000-00-00</a><br><a href="https://wa.me/79000000000" target="_blank" rel="noopener">Написать в WhatsApp</a></dd>
             <dt>Почта</dt><dd><a href="mailto:info@yasna-dent.example">info@yasna-dent.example</a></dd>
           </dl>
         </div>
@@ -273,7 +274,10 @@
     </div>
   </footer>
 
-  <a href="#booking" class="sticky-cta btn">Записаться бесплатно</a>
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="#booking" class="btn">Записаться</a>
+    <a href="https://wa.me/79000000000" class="btn btn--wa" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

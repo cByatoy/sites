@@ -200,7 +200,10 @@ p { margin: 0 0 1em; }
   .float--2 { right: 0; }
   .cards, .doctors, .reviews, .steps { grid-template-columns: 1fr; }
   .form { padding: 24px 20px; }
-  .sticky-cta { display: flex; position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 30; }
+  /* нижняя панель появляется, когда кнопки первого экрана ушли за край — не перекрывает их */
+  .sticky-cta { display: grid; grid-template-columns: 1.3fr 1fr; gap: 8px; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30; transform: translateY(140%); transition: transform .25s; }
+  .sticky-cta.is-shown { transform: none; }
+  .sticky-cta .btn { min-height: 50px; padding: 0 12px; }
   .footer { padding-bottom: 96px; }
 }
 
@@ -229,3 +232,9 @@ p { margin: 0 0 1em; }
   background: linear-gradient(90deg, rgb(16 41 43 / .05) 1px, transparent 1px) 0 0 / 40px 40px, linear-gradient(rgb(16 41 43 / .05) 1px, transparent 1px) 0 0 / 40px 40px, var(--tint); }
 .map-stub p { margin: 0; font-weight: 700; }
 .map-stub__pin { width: 28px; height: 28px; border-radius: 50% 50% 50% 0; background: var(--accent); transform: rotate(-45deg); }
+
+.header__wa { font-weight: 700; font-size: 14px; color: #1a9f53; text-decoration: none; white-space: nowrap; }
+.btn--wa { background: #1a9f53; }
+.btn--wa:hover { background: #158544; }
+@media (max-width: 960px) { .header__wa { margin-left: auto; } }
+@media (max-width: 760px) { .header__wa { display: none; } }

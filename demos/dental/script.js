@@ -85,3 +85,14 @@ document.querySelectorAll('form.form').forEach((form) => {
     form.reset();
   });
 });
+
+// Нижняя панель «Записаться / WhatsApp» на телефоне: показываем, когда кнопки первого экрана ушли из вида
+(function () {
+  var bar = document.getElementById('sticky-cta');
+  var heroActions = document.querySelector('.hero__actions');
+  if (!bar || !heroActions) return;
+  if (!('IntersectionObserver' in window)) { bar.classList.add('is-shown'); return; }
+  new IntersectionObserver(function (entries) {
+    bar.classList.toggle('is-shown', !entries[0].isIntersecting);
+  }).observe(heroActions);
+})();
