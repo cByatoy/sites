@@ -26,6 +26,15 @@ https://www.pexels.com/license/
 | beauty/img/work-5.webp | 4963837 |
 | beauty/img/work-6.webp | 22668317 |
 | beauty/img/brows.webp | 6135623 |
+| autoservice/img/hero.webp | 33814734 |
+| autoservice/img/before-1.webp | 33749906 |
+| autoservice/img/after-1.webp | 30250199 |
+| autoservice/img/before-2.webp | 35149611 |
+| autoservice/img/after-2.webp | 6870296 |
+| autoservice/img/work-1.webp | 33814735 |
+| autoservice/img/work-2.webp | 5233261 |
+| autoservice/img/work-3.webp | 11139244 |
+| autoservice/img/work-4.webp | 4870702 |
 | coffee/img/counter.webp | 29843736 |
 
 Страница фото: https://www.pexels.com/photo/<ID>/

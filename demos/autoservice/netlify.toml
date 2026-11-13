@@ -1,0 +1,6 @@
+# Отдельный сайт на Netlify: Base directory = эта папка.
+# Демо закрыто от индексации.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
