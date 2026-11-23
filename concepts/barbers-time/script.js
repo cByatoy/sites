@@ -99,3 +99,16 @@ document.querySelectorAll('form.form').forEach((form) => {
     try { localStorage.setItem('cookie-ok', '1'); } catch (e) {}
   });
 })();
+
+// Прайс: переключатель точки. Цены, которые отличаются, заданы в data-price-shotmana / data-price-dybenko.
+document.querySelectorAll('[data-price-point]').forEach((group) => {
+  const buttons = group.querySelectorAll('[data-point]');
+  const apply = (point) => {
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.point === point)));
+    document.querySelectorAll('[data-price-' + point + ']').forEach((el) => {
+      el.textContent = el.getAttribute('data-price-' + point) + ' ₽';
+    });
+  };
+  buttons.forEach((b) => b.addEventListener('click', () => apply(b.dataset.point)));
+  apply('shotmana');
+});

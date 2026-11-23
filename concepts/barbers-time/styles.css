@@ -245,3 +245,24 @@ p { margin: 0 0 1em; }
   .hero__inner { padding-top: 64px; padding-bottom: 48px; }
   .hero h1 { font-size: clamp(38px, 6vw, 76px); }
 }
+
+/* Две плашки «открыто/закрыто» */
+.statuses { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.statuses .status { margin-bottom: 0; }
+
+/* Новый прайс с 5 декабря */
+.price-new { display: inline-block; margin: 0; padding: 8px 14px; background: var(--gold); color: var(--ink) !important; border-radius: 4px; }
+.price-point { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 18px; font-weight: 600; }
+.price-point button { padding: 10px 16px; border: 2px solid var(--gold); border-radius: 4px; background: transparent; color: var(--ink); font: 800 13px/1 var(--head); letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+.price-point button[aria-pressed="true"] { background: var(--gold); }
+.price__diff b { color: var(--accent-dark); }
+.price__foot { margin: 18px 0 0; font-size: 14px; color: var(--muted); }
+
+/* Счастливые часы */
+.happy { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 4px 24px; margin: 0 0 28px; padding: 22px 26px; background: var(--ink); color: #fff; border: 2px solid var(--gold); border-radius: 6px; }
+.happy__label { grid-column: 1 / -1; margin: 0; color: var(--gold); font: 800 12px/1 var(--head); letter-spacing: .2em; text-transform: uppercase; }
+.happy__title { margin: 0; font-size: clamp(24px, 3.4vw, 34px); color: var(--gold); }
+.happy__text { margin: 0; font-size: 18px; font-weight: 600; }
+.happy__deal { margin: 0; font-weight: 700; text-align: right; }
+.happy__deal b { display: block; font: 900 clamp(36px, 5vw, 52px)/1 var(--head); color: var(--gold); }
+@media (max-width: 720px) { .happy { grid-template-columns: 1fr auto; } .happy__title { grid-column: 1 / -1; } .happy__deal { text-align: left; } }
