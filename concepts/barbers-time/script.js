@@ -45,59 +45,75 @@ document.querySelectorAll('[data-tabs]').forEach((tabs) => {
   }));
 });
 
-// Маска телефона
-document.querySelectorAll('input[type="tel"]').forEach((input) => {
-  input.addEventListener('input', () => {
-    let d = input.value.replace(/\D/g, '');
-    if (d.startsWith('8')) d = '7' + d.slice(1);
-    if (!d.startsWith('7')) d = '7' + d;
-    d = d.slice(0, 11);
-    const parts = ['+7'];
-    if (d.length > 1) parts.push(' (' + d.slice(1, 4));
-    if (d.length >= 4) parts.push(') ' + d.slice(4, 7));
-    if (d.length >= 7) parts.push('-' + d.slice(7, 9));
-    if (d.length >= 9) parts.push('-' + d.slice(9, 11));
-    input.value = parts.join('');
-  });
-});
-
-// Форма заявки. В демо заявка никуда не отправляется;
-// на реальном сайте здесь отправка в Telegram-бот или через Web3Forms.
-document.querySelectorAll('form.form').forEach((form) => {
-  const status = form.querySelector('.form__status');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const phone = form.querySelector('input[type="tel"]');
-    const consent = form.querySelector('input[name="consent"]');
-    const name = form.querySelector('input[name="name"]');
-    form.querySelectorAll('.is-invalid').forEach((el) => el.classList.remove('is-invalid'));
-    let error = '';
-    if (name && !name.value.trim()) { name.classList.add('is-invalid'); error = 'Укажите имя.'; }
-    if (phone && phone.value.replace(/\D/g, '').length < 11) { phone.classList.add('is-invalid'); error = error || 'Проверьте номер телефона.'; }
-    if (consent && !consent.checked) { consent.closest('label').classList.add('is-invalid'); error = error || 'Нужно согласие на обработку данных.'; }
-    if (error) {
-      status.textContent = error;
-      status.dataset.state = 'error';
-      return;
-    }
-    status.textContent = 'Спасибо! Мы перезвоним в течение 15 минут. (Демо: заявка не отправляется.)';
-    status.dataset.state = 'ok';
-    form.reset();
-  });
-});
-
-// Cookie-баннер (заглушка концепта)
+// Согласие на cookie, Яндекс Метрика и виджеты Яндекса (логика из templates/production-starter)
 (function () {
-  const banner = document.getElementById('cookie');
-  if (!banner) return;
-  let seen = false;
-  try { seen = localStorage.getItem('cookie-ok') === '1'; } catch (e) {}
-  if (!seen) banner.hidden = false;
-  const ok = banner.querySelector('[data-cookie-ok]');
-  if (ok) ok.addEventListener('click', () => {
-    banner.hidden = true;
-    try { localStorage.setItem('cookie-ok', '1'); } catch (e) {}
+  var CONFIG = window.SITE_CONFIG || {};
+  var CONSENT_KEY = 'cookie-consent'; // 'all' | 'necessary'
+  var banner = document.getElementById('cookie');
+  function readConsent() { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } }
+  function saveConsent(v) { try { localStorage.setItem(CONSENT_KEY, v); } catch (e) {} }
+  function showBanner(show) { if (banner) banner.hidden = !show; }
+
+  // Яндекс Метрика: только после согласия и только если вписан числовой ID
+  var metrikaLoaded = false;
+  var metrikaId = Number(CONFIG.metrikaId);
+  function loadMetrika() {
+    if (metrikaLoaded || !metrikaId) return;
+    metrikaLoaded = true;
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t); a = e.getElementsByTagName(t)[0];
+      k.async = 1; k.src = r; a.parentNode.insertBefore(k, a);
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+    window.ym(metrikaId, 'init', { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: false });
+  }
+  // Цели: элементы с data-goal. В Метрике заводятся как «JavaScript-событие» с тем же именем.
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-goal]');
+    if (el && metrikaLoaded && window.ym) window.ym(metrikaId, 'reachGoal', el.getAttribute('data-goal'));
   });
+
+  // Карта и отзывы Яндекса: после согласия или по кнопке
+  function embedReady(box) { var src = box && box.getAttribute('data-src'); return src && src.indexOf('{{') === -1; }
+  function loadEmbed(box) {
+    if (!embedReady(box) || box.dataset.loaded) return;
+    box.dataset.loaded = '1';
+    var f = document.createElement('iframe');
+    f.src = box.getAttribute('data-src');
+    f.title = box.getAttribute('data-title') || '';
+    f.loading = 'lazy';
+    f.setAttribute('allowfullscreen', '');
+    box.innerHTML = '';
+    box.appendChild(f);
+    box.classList.add('is-loaded');
+  }
+  function loadAllEmbeds() { document.querySelectorAll('[data-consent-embed]').forEach(loadEmbed); }
+  document.querySelectorAll('[data-embed-load]').forEach(function (b) {
+    var box = b.closest('[data-consent-embed]');
+    if (!embedReady(box)) { b.hidden = true; return; } // ID ещё не вписан — кнопку не показываем
+    b.addEventListener('click', function () { loadEmbed(box); });
+  });
+
+  function applyConsent(v) { if (v === 'all') { loadMetrika(); loadAllEmbeds(); } }
+  document.querySelectorAll('[data-cookie-accept]').forEach(function (b) {
+    b.addEventListener('click', function () { saveConsent('all'); showBanner(false); applyConsent('all'); });
+  });
+  document.querySelectorAll('[data-cookie-reject]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var was = readConsent();
+      saveConsent('necessary');
+      showBanner(false);
+      // Метрика и виджеты уже загружены: перезагружаем страницу, чтобы они отключились
+      if (was === 'all' || metrikaLoaded) location.reload();
+    });
+  });
+  document.querySelectorAll('[data-cookie-settings]').forEach(function (b) {
+    b.addEventListener('click', function () { showBanner(true); });
+  });
+
+  var consent = readConsent();
+  if (consent) applyConsent(consent); else showBanner(true);
 })();
 
 // Прайс: переключатель точки. Цены, которые отличаются, заданы в data-price-shotmana / data-price-dybenko.
@@ -112,3 +128,14 @@ document.querySelectorAll('[data-price-point]').forEach((group) => {
   buttons.forEach((b) => b.addEventListener('click', () => apply(b.dataset.point)));
   apply('shotmana');
 });
+
+// Нижняя панель на телефоне: показываем, когда первый экран ушёл из вида
+(function () {
+  var bar = document.querySelector('.mobile-bar');
+  var hero = document.querySelector('.hero');
+  if (!bar) return;
+  if (!hero || !('IntersectionObserver' in window)) { bar.classList.add('is-shown'); return; }
+  new IntersectionObserver(function (entries) {
+    bar.classList.toggle('is-shown', !entries[0].isIntersecting);
+  }).observe(hero);
+})();

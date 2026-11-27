@@ -1,0 +1,5 @@
+# Боевой robots.txt. {{DOMAIN}} заменить на домен клиента.
+User-agent: *
+Allow: /
+
+Sitemap: https://{{DOMAIN}}/sitemap.xml

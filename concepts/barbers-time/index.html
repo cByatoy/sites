@@ -3,21 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Barber's Time — мужские стрижки без записи на Шотмана, 11</title>
-  <meta name="description" content="Барбершоп Barber's Time: две точки в Невском районе — Шотмана, 11 и Дыбенко, 2. Мужская стрижка от 1 100 ₽. 5,0 на Яндекс Картах.">
+  <title>Barber's Time — барбершоп на Шотмана, 11 и Дыбенко, 2 в Петербурге</title>
+  <meta name="description" content="Барбершоп Barber's Time в Невском районе. Шотмана, 11 без записи, Дыбенко, 2 по онлайн-записи. Ежедневно 9:00–21:00. Мужская стрижка от 1 100 ₽.">
+  <!-- УБРАТЬ при запуске на боевом домене -->
   <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Cpath d='M6 18c3-5 7-5 10-1 3-4 7-4 10 1-3-1-6 0-10 3-4-3-7-4-10-3z' fill='%23e8c07d'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://{{DOMAIN}}/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Barber's Time">
+  <meta property="og:title" content="Barber's Time — барбершоп на Шотмана, 11 и Дыбенко, 2">
+  <meta property="og:description" content="Мужские стрижки от 1 100 ₽. Шотмана, 11 без записи, Дыбенко, 2 по онлайн-записи. Ежедневно 9:00–21:00.">
+  <meta property="og:url" content="https://{{DOMAIN}}/">
+  <meta property="og:image" content="https://{{DOMAIN}}/img/og.jpg">
+  <meta name="theme-color" content="#0f0f10">
+  <link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preload" href="fonts/montserrat-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="topwrap">
-  <div class="concept-bar">Это концепт сайта для Barber's Time — подготовил Ярослав</div>
   <header class="header">
     <div class="container header__inner">
-      <a href="#top" class="logo"><span class="logo__mark" aria-hidden="true"></span><span class="logo__text">Barber's Time<small>Барберс Тайм</small></span></a>
+      <a href="#top" class="logo"><img class="logo__img" src="img/logo-header.png" width="43" height="40" alt=""><span class="logo__text">Barber's Time<small>Барберс Тайм</small></span></a>
       <nav class="nav" id="nav">
         <a href="#prices">Цены</a>
         <a href="#points">Точки</a>
@@ -25,14 +35,18 @@
         <a href="#reviews">Отзывы</a>
         <a href="#contacts">Контакты</a>
       </nav>
-      <a class="header__phone" href="tel:+79967709930">+7 996 770-99-30</a>
+      <a class="header__phone" href="tel:+79967709930" data-goal="click_phone">+7 996 770-99-30</a>
       <button class="burger" aria-label="Меню" aria-controls="nav" aria-expanded="false"><span></span></button>
     </div>
   </header>
+  <!-- Cookie: Метрика, карта и отзывы Яндекса включаются только после «Принять» -->
   <div class="cookie" id="cookie" role="region" aria-label="Cookie" hidden>
-    <p class="cookie__full">Мы используем cookie, чтобы сайт работал удобнее. Подробнее — в <a href="privacy.html">политике конфиденциальности</a>.</p>
-    <p class="cookie__short">Мы используем cookie. <a href="privacy.html">Подробнее</a></p>
-    <button class="btn btn--accent" type="button" data-cookie-ok>Понятно</button>
+    <p class="cookie__full">Используем cookie и Яндекс Метрику. <a href="privacy.html#cookie">Подробнее</a></p>
+    <p class="cookie__short">Cookie и Метрика. <a href="privacy.html#cookie">Подробнее</a></p>
+    <div class="cookie__btns">
+      <button class="btn btn--ghost" type="button" data-cookie-reject>Только нужные</button>
+      <button class="btn btn--accent" type="button" data-cookie-accept>Принять</button>
+    </div>
   </div>
   </div>
 
@@ -40,17 +54,16 @@
     <section class="hero">
       <img class="hero__bg" src="img/hall.webp" alt="Зал барбершопа Barber's Time" fetchpriority="high">
       <div class="container hero__inner">
-        <p class="concept-tag">Концепт сайта · подготовил Ярослав</p>
         <div class="statuses">
           <p class="status" data-open-status="shotmana">Шотмана, 11: ежедневно 9:00–21:00</p>
-          <p class="status" data-open-status="dybenko">Дыбенко, 2</p>
+          <p class="status" data-open-status="dybenko">Дыбенко, 2: ежедневно 9:00–21:00</p>
         </div>
         <h1>Мужские стрижки — <em>от&nbsp;1&nbsp;100&nbsp;₽</em></h1>
         <p class="lead">Две точки в Невском районе: Шотмана, 11 и Дыбенко, 2. На Шотмана ждать не больше 10 минут.</p>
         <div class="hero__actions">
           <a class="btn btn--accent" href="#points">Выбрать точку</a>
-          <a class="btn btn--ghost" href="https://wa.me/79967709930" target="_blank" rel="noopener">Написать в WhatsApp</a>
-          <a class="btn btn--ghost" href="https://t.me/+79967709930" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn--ghost" href="https://wa.me/79967709930" target="_blank" rel="noopener" data-goal="click_whatsapp">Написать в WhatsApp</a>
+          <a class="btn btn--ghost" href="https://t.me/+79967709930" target="_blank" rel="noopener" data-goal="click_telegram">Telegram</a>
         </div>
         <ul class="badges">
           <li class="badge--promo"><a href="#prices"><b>−30%</b> первый визит · <b>−10%</b> за отзыв</a></li>
@@ -58,7 +71,6 @@
           <li><b>5,0</b> на Яндекс Картах · 202 отзыва</li>
           <li>Можно с собакой</li>
           <li>Wi-Fi</li>
-          <li>Льготная стрижка</li>
         </ul>
       </div>
     </section>
@@ -73,19 +85,17 @@
             <p>Живая очередь, ждать не больше 10 минут. Ежедневно 9:00–21:00. Можно с собакой, есть Wi-Fi.</p>
             <div class="point__btns">
               <a class="btn btn--accent" href="https://yandex.ru/maps/2/saint-petersburg/?text=Barber%27s%20Time%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A8%D0%BE%D1%82%D0%BC%D0%B0%D0%BD%D0%B0%2C%2011" target="_blank" rel="noopener">Маршрут</a>
-              <a class="btn btn--ghost" href="tel:+79967709930">Позвонить</a>
+              <a class="btn btn--ghost" href="tel:+79967709930" data-goal="click_phone">Позвонить</a>
             </div>
           </article>
           <article class="point point--alt reveal">
             <p class="kicker">Онлайн-запись</p>
             <h3>Дыбенко, 2</h3>
-            <p>Выберите мастера и удобное время заранее — без ожидания.</p>
-            <p class="point__tbd">Часы работы уточним.</p>
+            <p>Выберите мастера и время заранее, ждать не придётся. Ежедневно 9:00–21:00.</p>
             <div class="point__btns">
-              <a class="btn btn--accent" href="https://wa.me/79967709930?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%94%D1%8B%D0%B1%D0%B5%D0%BD%D0%BA%D0%BE%2C%202" target="_blank" rel="noopener">Записаться онлайн</a>
+              <a class="btn btn--accent" href="https://dikidi.ru/2139508" target="_blank" rel="noopener" data-goal="click_booking">Записаться онлайн</a>
               <a class="btn btn--ghost" href="https://yandex.ru/maps/2/saint-petersburg/?text=Barber%27s%20Time%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%94%D1%8B%D0%B1%D0%B5%D0%BD%D0%BA%D0%BE%2C%202" target="_blank" rel="noopener">Маршрут</a>
             </div>
-            <p class="point__note">Сюда подключим вашу систему онлайн-записи.</p>
           </article>
         </div>
       </div>
@@ -106,7 +116,7 @@
         <div class="step reveal">
           <span class="step__n">03</span>
           <h3>Дыбенко, 2</h3>
-          <p>Выберите мастера и удобное время заранее. Мужская стрижка — 1 200 ₽, полный прайс — ниже.</p>
+          <p>Онлайн-запись к мастеру на удобное время. Ежедневно 9:00–21:00. Мужская стрижка 1 200 ₽, полный прайс ниже.</p>
         </div>
       </div>
     </section>
@@ -239,12 +249,18 @@
             </div>
             <a class="btn btn--accent ywidget__btn" href="https://yandex.ru/maps/?text=Barber%27s%20Time%20%D0%A8%D0%BE%D1%82%D0%BC%D0%B0%D0%BD%D0%B0%2011" target="_blank" rel="noopener">Все отзывы</a>
           </div>
-          <div class="reviews">
-            <blockquote class="review"><p>«Дмитрий отличный мастер) Спасибо за отличную работу и приятную беседу!»</p><footer>Захар К., октябрь</footer></blockquote>
-            <blockquote class="review"><p>«Рустам лучший мастер, хожу к нему больше года, и каждая стрижка идеальна»</p><footer>Егор Х., октябрь</footer></blockquote>
-            <blockquote class="review"><p>«Подстригал барбер Дмитрий, спасибо большое, очень доволен стрижкой 10/10!»</p><footer>Артём И., октябрь</footer></blockquote>
+          <!-- Официальный виджет отзывов Яндекса. ID организации — из ссылки на карточку yandex.ru/maps/org/<имя>/<ID>/.
+               Загружается только после согласия на cookie или по кнопке. Пока ID не вписан, показываются отзывы ниже. -->
+          <div class="embed embed--reviews" data-consent-embed data-src="https://yandex.ru/maps-reviews-widget/{{YANDEX_ORG_ID}}?comments" data-title="Отзывы на Яндекс Картах">
+            <div class="embed__placeholder">
+              <div class="reviews">
+                <blockquote class="review"><p>«Дмитрий отличный мастер) Спасибо за отличную работу и приятную беседу!»</p><footer>Захар К., октябрь</footer></blockquote>
+                <blockquote class="review"><p>«Рустам лучший мастер, хожу к нему больше года, и каждая стрижка идеальна»</p><footer>Егор Х., октябрь</footer></blockquote>
+                <blockquote class="review"><p>«Подстригал барбер Дмитрий, спасибо большое, очень доволен стрижкой 10/10!»</p><footer>Артём И., октябрь</footer></blockquote>
+              </div>
+              <button class="btn btn--dark" type="button" data-embed-load>Показать все отзывы здесь</button>
+            </div>
           </div>
-          <p class="ywidget__note">Здесь будет официальный виджет Яндекса — отзывы будут обновляться сами.</p>
         </div>
       </div>
     </section>
@@ -255,18 +271,24 @@
           <h2>Ждём вас</h2>
           <dl>
             <dt>Шотмана, 11</dt><dd>Ежедневно 9:00–21:00, ждать не больше 10 минут<br>м. Улица Дыбенко</dd>
-            <dt>Дыбенко, 2</dt><dd>По онлайн-записи · часы уточним</dd>
+            <dt>Дыбенко, 2</dt><dd>Ежедневно 9:00–21:00, <a href="https://dikidi.ru/2139508" target="_blank" rel="noopener" data-goal="click_booking">онлайн-запись</a></dd>
             <dt>Телефон</dt><dd><a href="tel:+79967709930">+7 996 770-99-30</a></dd>
           </dl>
           <div class="contacts__btns">
-            <a class="btn btn--accent" href="tel:+79967709930">Позвонить</a>
-            <a class="btn btn--ghost" href="https://wa.me/79967709930" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="btn btn--ghost" href="https://t.me/+79967709930" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn btn--accent" href="tel:+79967709930" data-goal="click_phone">Позвонить</a>
+            <a class="btn btn--ghost" href="https://wa.me/79967709930" target="_blank" rel="noopener" data-goal="click_whatsapp">WhatsApp</a>
+            <a class="btn btn--ghost" href="https://t.me/+79967709930" target="_blank" rel="noopener" data-goal="click_telegram">Telegram</a>
           </div>
         </div>
         <div class="contacts__media reveal">
           <img src="img/entrance.webp" alt="Вход в барбершоп Barber's Time на Шотмана, 11" loading="lazy">
-          <iframe title="Карта: Barber's Time" src="https://yandex.ru/map-widget/v1/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A8%D0%BE%D1%82%D0%BC%D0%B0%D0%BD%D0%B0%2C%2011&z=16" loading="lazy"></iframe>
+          <!-- Карта Яндекса с обеими точками (долгота,широта). Загружается только после согласия на cookie или по кнопке. -->
+          <div class="embed embed--map" data-consent-embed data-src="https://yandex.ru/map-widget/v1/?ll=30.466171%2C59.900540&amp;z=13&amp;pt=30.486179%2C59.901661%2Cpm2rdm1~30.446163%2C59.899418%2Cpm2rdm2" data-title="Карта: Barber's Time на Шотмана, 11 и Дыбенко, 2">
+            <div class="embed__placeholder">
+              <p>1 — Шотмана, 11<br>2 — Дыбенко, 2</p>
+              <button class="btn btn--ghost" type="button" data-embed-load>Показать карту</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -275,23 +297,29 @@
   <footer class="footer">
     <div class="container">
       <p>© <span data-year></span> Barber's Time («Барберс Тайм») · ул. Шотмана, 11 · ул. Дыбенко, 2</p>
-      <p class="footer__legal"><span class="placeholder">ИП/ООО …, ИНН …</span> · <a href="privacy.html">Политика конфиденциальности</a></p>
-      <p class="footer__note">Это концепт: тексты и цены взяты из открытой карточки на Яндекс Картах, фото — с визитки. Всё легко поменять.</p>
+      <!-- Реквизиты (ИП: ФИО, ИНН; ООО: название, ИНН, ОГРН) вписываются при сборке архива для хостинга, в репозиторий не кладём -->
+      <p class="footer__legal">{{REKVIZITY}}</p>
+      <p class="footer__legal"><a href="privacy.html">Политика конфиденциальности</a> · <button class="linklike" type="button" data-cookie-settings>Настройки cookie</button></p>
     </div>
   </footer>
 
   <div class="mobile-bar">
-    <a href="tel:+79967709930">Позвонить</a>
-    <a href="#points">Две точки</a>
+    <a href="tel:+79967709930" data-goal="click_phone">Позвонить</a>
+    <a href="https://dikidi.ru/2139508" target="_blank" rel="noopener" data-goal="click_booking">Запись</a>
+    <a href="#points">Точки</a>
   </div>
 
+  <script>
+    // Настройки сайта. ID счётчика Метрики — число из metrika.yandex.ru; пока стоит плейсхолдер, Метрика выключена.
+    window.SITE_CONFIG = { metrikaId: '{{METRIKA_ID}}' };
+  </script>
   <script src="script.js"></script>
   <script>
     // Открыто / закрыто по часам работы (время Петербурга).
     // Часы точек меняются здесь: [открытие, закрытие] в часах; null — часы ещё не известны.
     var POINT_HOURS = {
       shotmana: { name: 'Шотмана, 11', hours: [9, 21] },
-      dybenko:  { name: 'Дыбенко, 2',  hours: null } // ЧАСЫ УТОЧНИТЬ у клиента, например [9, 21]
+      dybenko:  { name: 'Дыбенко, 2',  hours: [9, 21] }
     };
     (function () {
       var now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Moscow' }));
