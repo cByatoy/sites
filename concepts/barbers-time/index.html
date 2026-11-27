@@ -106,7 +106,7 @@
         <div class="step reveal">
           <span class="step__n">01</span>
           <h3>Новый формат для сети</h3>
-          <p>Приходите, когда удобно, — не нужно подстраиваться под свободное окно.</p>
+          <p>Приходите, когда удобно. Не нужно подстраиваться под свободное окно.</p>
         </div>
         <div class="step reveal">
           <span class="step__n">02</span>
@@ -298,7 +298,7 @@
     <div class="container">
       <p>© <span data-year></span> Barber's Time («Барберс Тайм») · ул. Шотмана, 11 · ул. Дыбенко, 2</p>
       <!-- Реквизиты (ИП: ФИО, ИНН; ООО: название, ИНН, ОГРН) вписываются при сборке архива для хостинга, в репозиторий не кладём -->
-      <p class="footer__legal">{{REKVIZITY}}</p>
+      <p class="footer__legal" data-ph>{{REKVIZITY}}</p>
       <p class="footer__legal"><a href="privacy.html">Политика конфиденциальности</a> · <button class="linklike" type="button" data-cookie-settings>Настройки cookie</button></p>
     </div>
   </footer>
@@ -312,6 +312,10 @@
   <script>
     // Настройки сайта. ID счётчика Метрики — число из metrika.yandex.ru; пока стоит плейсхолдер, Метрика выключена.
     window.SITE_CONFIG = { metrikaId: '{{METRIKA_ID}}' };
+  </script>
+  <script>
+    // Пока вместо реквизитов, домена или даты стоит плейсхолдер, строку не показываем. При сборке для хостинга плейсхолдеры заменяются.
+    document.querySelectorAll('[data-ph]').forEach(function (el) { if (el.textContent.indexOf('{{') !== -1) el.hidden = true; });
   </script>
   <script src="script.js"></script>
   <script>
